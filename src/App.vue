@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <nav></nav>
-    <section></section>
-    <footer><Frameworks/></footer>
+    <Header/>
+    <NavMenu/>
+    <section>
+      <router-view/>
+    </section>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Frameworks from './components/FooterFrameworks'
+import Footer from './components/Footer'
 import Header from './components/Header'
+import NavMenu from './components/NavMenu'
 export default {
   name: 'App',
   components: {
     Header,
-    Frameworks
+    Footer,
+    NavMenu
   }
 }
 </script>
@@ -24,7 +28,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
 }
+
 </style>

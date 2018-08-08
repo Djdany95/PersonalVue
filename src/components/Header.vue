@@ -2,7 +2,7 @@
 <template>
   <header>
       <div>
-        <h1>test</h1>
+        <h1>Dkdnil J. Pkfms Nkder</h1>
         <Languages class="langComp"/>
     </div>
   </header>
@@ -24,10 +24,10 @@ export default {
 
 <style scoped>
 .langComp {
-    right: 0px;
-    top: 10px;
-    position: absolute;
-    padding: 1em;
-    text-align: right;
+  right: 0px;
+  top: 10px;
+  position: absolute;
+  padding: 1em;
+  text-align: right;
 }
 </style>
