@@ -1,19 +1,16 @@
 
 <template>
   <header>
-      <div>
-        <h1>Dkdnil J. Pkfms Nkder</h1>
-        <Languages class="langComp"/>
-    </div>
+      <NavMenu/>
   </header>
 </template>
 
 <script>
-import Languages from './HeaderLanguages'
+import NavMenu from './NavMenu'
 export default {
   name: 'Header',
   components: {
-    Languages
+    NavMenu
   },
   data () {
     return {
@@ -23,11 +20,4 @@ export default {
 </script>
 
 <style scoped>
-.langComp {
-  right: 0px;
-  top: 10px;
-  position: absolute;
-  padding: 1em;
-  text-align: right;
-}
 </style>

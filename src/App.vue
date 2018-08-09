@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Header/>
-    <NavMenu/>
     <section>
       <router-view/>
     </section>
@@ -12,13 +11,13 @@
 <script>
 import Footer from './components/Footer'
 import Header from './components/Header'
-import NavMenu from './components/NavMenu'
 export default {
   name: 'App',
   components: {
     Header,
-    Footer,
-    NavMenu
+    Footer
+  },
+  methods: {
   }
 }
 </script>
@@ -30,5 +29,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-
+Footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+Header{
+  position:fixed;
+  right: 0px;
+  top: 10px;
+  width: 100%;
+  text-align: right;
+}
 </style>
