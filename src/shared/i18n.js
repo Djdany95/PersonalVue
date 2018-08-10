@@ -1,26 +1,46 @@
 export const strings = {
   es: {
-    header: 'Dkdnil J. Pkfms Nkder',
-    home: 'Inicio',
-    blog: 'Blog',
-    portfolio: 'Proyectos',
-    about: 'Sobre mí',
+    name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
       made: 'Hecho con',
       by: 'por',
       me: 'Mi'
+    },
+    section: {
+      home: {
+        title: 'Inicio'
+      },
+      blog: {
+        title: 'Blog'
+      },
+      projects: {
+        title: 'Proyectos'
+      },
+      about: {
+        title: 'Sobre mí'
+      }
     }
   },
   en: {
-    header: 'Dkdnil J. Pkfms Nkder',
-    home: 'Home',
-    blog: 'Blog',
-    portfolio: 'Projects',
-    about: 'About',
+    name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
       made: 'Made with',
       by: 'by',
       me: 'Me'
+    },
+    section: {
+      home: {
+        title: 'Home'
+      },
+      blog: {
+        title: 'Blog'
+      },
+      projects: {
+        title: 'Projects'
+      },
+      about: {
+        title: 'About'
+      }
     }
   }
 }
