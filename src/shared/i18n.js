@@ -2,7 +2,7 @@ export const strings = {
   es: {
     name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
-      made: 'Hecho con',
+      made: 'Hecho sólo con',
       by: 'por',
       me: 'Mi'
     },
@@ -24,7 +24,7 @@ export const strings = {
   en: {
     name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
-      made: 'Made with',
+      made: 'Made only with',
       by: 'by',
       me: 'Me'
     },

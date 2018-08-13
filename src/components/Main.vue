@@ -29,8 +29,21 @@ export default {
 </script>
 
 <style>
-footer {
+header {
   position: fixed;
+  z-index: 999;
+  right: 0px;
+  top: 10px;
+  width: 100%;
+  text-align: right;
+}
+section{
+  margin-top: 60px;
+  height: 100%;
+  padding: 0 2em 0 2em;
+}
+footer {
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -45,13 +58,7 @@ footer {
     text-align: right;
   }
 }
-header {
-  position: fixed;
-  right: 0px;
-  top: 10px;
-  width: 100%;
-  text-align: right;
-}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }

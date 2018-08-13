@@ -1,6 +1,6 @@
 <template>
   <nav class="navMenu">
-    <router-link v-for="item in menu" :key="item.name" :style="{'color': item.color, 'background-color': item.url===actual?item.bck:'none'}" :to="item.url">{{ $t('section.'+item.name+'.title') }} <i :class="item.icon"></i></router-link>
+    <router-link v-for="item in menu" :key="item.name" :id="item.name" :style="{'color': item.color}" :to="item.url">{{ $t('section.'+item.name+'.title') }} <i :class="item.icon"></i></router-link>
   </nav>
 </template>
 
@@ -9,7 +9,6 @@ export default {
   name: 'NavMenu',
   data () {
     return {
-      actual: this.$route.path,
       menu: [
         { 'name': 'home', 'icon': 'fas fa-home', 'color': '#2caf74', 'bck': '#ccffe8', 'url': '/' },
         { 'name': 'blog', 'icon': 'fas fa-file-alt', 'color': '#be030c', 'bck': '#ffd1db', 'url': '/blog' },
@@ -20,7 +19,21 @@ export default {
   },
   watch: {
     '$route' (to, from) {
-      this.actual = to.path
+      this.setBckColor()
+    }
+  },
+  mounted () {
+    this.setBckColor()
+  },
+  methods: {
+    setBckColor: function () {
+      this.menu.forEach(item => {
+        if (item.url === this.$route.path) {
+          document.getElementById(item.name).style.backgroundColor = item.bck
+        } else {
+          document.getElementById(item.name).style.backgroundColor = 'initial'
+        }
+      })
     }
   }
 }
@@ -38,20 +51,35 @@ export default {
   margin: 0.5em;
   padding: 0.5em;
 }
-.navMenu a:hover {
-  font-size: 1.1em;
-}
-
 .navMenu .fas {
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
-
-@media screen and (max-width: 767.99px) {
+.navMenu a:hover {
+  font-size: 1.4em;
+}
+/*Responsive*/
+@media screen and (max-width: 599.98px) {
+  .navMenu a {
+    font-size: 0.8em;
+  }
+  .navMenu a:hover {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 425.98px) {
   .navMenu a {
     font-size: 0.7em;
-    }
+  }
   .navMenu a:hover {
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 399.98px) {
+  .navMenu a {
+    font-size: 0.6em;
+  }
+  .navMenu a:hover {
+    font-size: 0.9em;
   }
 }
 </style>

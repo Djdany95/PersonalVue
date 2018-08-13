@@ -16,9 +16,4 @@ export default {
 </script>
 
 <style scoped>
-#blog{
-  margin-top: 10%;
-  height: 100%;
-  width: 100%;
-}
 </style>
