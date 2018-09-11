@@ -2,7 +2,7 @@ export const strings = {
   es: {
     name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
-      made: 'Hecho sólo con',
+      made: 'Hecho con',
       by: 'por',
       me: 'Mi'
     },
@@ -14,7 +14,13 @@ export const strings = {
         title: 'Blog'
       },
       projects: {
-        title: 'Proyectos'
+        title: 'Proyectos',
+        mywatchlist: 'Web to do a tracking list of your series.',
+        mywatchlistapi: 'API for the project MyWatchList.',
+        nomoreintros: 'Program to cut videos (Delete that Intros/Outros).',
+        horascli: 'Simple python CLI to create a schedule of hours used in projects.',
+        personalvue: 'Personal multilanguage portfolio and blog Vue version.',
+        deleteblanklines: 'Python script to delete blank lines in a file.'
       },
       about: {
         title: 'Sobre mí'
@@ -24,7 +30,7 @@ export const strings = {
   en: {
     name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
-      made: 'Made only with',
+      made: 'Made with',
       by: 'by',
       me: 'Me'
     },
@@ -39,7 +45,7 @@ export const strings = {
         title: 'Projects'
       },
       about: {
-        title: 'About'
+        title: 'About Me'
       }
     }
   }
