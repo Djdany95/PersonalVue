@@ -15,21 +15,20 @@ export default {
   name: 'Projects',
   data () {
     return {
-      projects: [
-        {'name': 'MyWatchList', 'icon': 'fab fa-angular', 'url': 'https://mywatchlist.xyz', 'desc': 'Web to do a tracking list of your series.', 'bck': ''},
-        {'name': 'MyWatchList API', 'icon': 'fab fa-node-js', 'url': 'https://github.com/djdany01/MyWatchListAPI', 'desc': 'API for the project MyWatchList.', 'bck': ''},
-        {'name': 'NoMoreIntros', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/NoMoreIntros/releases', 'desc': 'Program to cut videos (Delete that Intros/Outros).', 'bck': ''},
-        {'name': 'HorasCLI', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/HorasCLI', 'desc': 'Simple python CLI to create a schedule of hours used in projects.', 'bck': ''},
-        {'name': 'PersonalVue', 'icon': 'fab fa-vuejs', 'url': 'https://daniperez.me', 'desc': 'Personal multilanguage portfolio and blog Vue version.', 'bck': ''},
-        {'name': 'DeleteBlankLines', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/DeleteBlankLines', 'desc': 'Python script to delete blank lines in a file.', 'bck': ''}
-      ],
-      colors: ['#ccffe8', '#ffd1db', '#ffffd2', '#d4f6ff', '#95F7CA', '#9ACFF5', '#FFB59A', '#FFD39A']
+      colors: ['#ccffe8', '#ffd1db', '#ffffd2', '#d4f6ff', '#95F7CA', '#9ACFF5', '#FFB59A', '#FFD39A', '#d4f6ff', '#ffffd2', '#ffd1db', '#ff8a90', '#ffee7d', '#84e4ff']
     }
   },
-  beforeMount () {
-    this.projects.forEach(project => {
-      project.bck = this.colors[Math.floor(Math.random() * this.colors.length)]
-    })
+  computed: {
+    projects: function () {
+      return [
+        {'name': 'MyWatchList', 'icon': 'fab fa-angular', 'url': 'https://github.com/djdany01/MyWatchList', 'desc': this.$t('section.projects.mywatchlist'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
+        {'name': 'MyWatchList API', 'icon': 'fab fa-node-js', 'url': 'https://github.com/djdany01/MyWatchListAPI', 'desc': this.$t('section.projects.mywatchlistapi'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
+        {'name': 'NoMoreIntros', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/NoMoreIntros', 'desc': this.$t('section.projects.nomoreintros'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
+        {'name': 'HorasCLI', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/HorasCLI', 'desc': this.$t('section.projects.horascli'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
+        {'name': 'PersonalVue', 'icon': 'fab fa-vuejs', 'url': 'https://github.com/djdany01/personalVue', 'desc': this.$t('section.projects.personalvue'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
+        {'name': 'DeleteBlankLines', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/DeleteBlankLines', 'desc': this.$t('section.projects.deleteblanklines'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]}
+      ]
+    }
   }
 }
 </script>
@@ -46,13 +45,13 @@ export default {
   text-align: center;
   position: relative;
   transition: all 0.3s ease;
+  border: 1px solid rgba(44, 175, 116, 0.2);
 }
 .projectCard:hover {
   top: -5px;
-  left: -5px;
-  -webkit-box-shadow: 5px 5px 10px 1px rgba(44, 175, 116, 0.5);
-  -moz-box-shadow: 5px 5px 10px 1px rgba(44, 175, 116, 0.5);
-  box-shadow: 5px 5px 10px 1px rgba(44, 175, 116, 0.5);
+  -webkit-box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
+  -moz-box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
+  box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
 }
 .projectCard h2 {
   position: relative;
@@ -64,16 +63,19 @@ export default {
 .projectCard h4 {
   position: absolute;
   bottom: 0px;
-  left: 1px;
 }
 
 /*Responsive*/
 @media screen and (max-width: 959.98px) {
   .projectCard {
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     width: 100%;
     margin: 1em 0 0 0;
+  }
+  .projectCard h4 {
+    position: relative;
+    bottom: -20px;
   }
 }
 </style>

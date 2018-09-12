@@ -10,10 +10,9 @@ export default {
   data () {
     return {
       menu: [
-        { 'name': 'home', 'icon': 'fas fa-home', 'color': '#2caf74', 'bck': '#ccffe8', 'url': '/' },
-        { 'name': 'blog', 'icon': 'fas fa-file-alt', 'color': '#be030c', 'bck': '#ffd1db', 'url': '/blog' },
+        { 'name': 'about', 'icon': 'fas fa-user-circle', 'color': '#48b9d8', 'bck': '#d4f6ff', 'url': '/' },
         { 'name': 'projects', 'icon': 'fas fa-folder-open', 'color': '#d6ba00', 'bck': '#ffffd2', 'url': '/projects' },
-        { 'name': 'about', 'icon': 'fas fa-user-circle', 'color': '#48b9d8', 'bck': '#d4f6ff', 'url': '/about' }
+        { 'name': 'blog', 'icon': 'fas fa-file-alt', 'color': '#be030c', 'bck': '#ffd1db', 'url': '/blog' }
       ]
     }
   },

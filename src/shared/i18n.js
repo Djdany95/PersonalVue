@@ -1,6 +1,5 @@
 export const strings = {
   es: {
-    name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
       made: 'Hecho con',
       by: 'por',
@@ -15,20 +14,24 @@ export const strings = {
       },
       projects: {
         title: 'Proyectos',
-        mywatchlist: 'Web to do a tracking list of your series.',
-        mywatchlistapi: 'API for the project MyWatchList.',
-        nomoreintros: 'Program to cut videos (Delete that Intros/Outros).',
-        horascli: 'Simple python CLI to create a schedule of hours used in projects.',
-        personalvue: 'Personal multilanguage portfolio and blog Vue version.',
-        deleteblanklines: 'Python script to delete blank lines in a file.'
+        mywatchlist: 'Web para llevar un seguimiento de tus series.',
+        mywatchlistapi: 'API para la aplicación web MyWatchList.',
+        nomoreintros: 'Programa para cortar videos, intros y créditos.',
+        horascli:
+          'Python CLI para crear el seguimiento de las horas usadas en tus proyectos con Markdown.',
+        personalvue: 'Portafolio personal multilenguaje en VueJS.',
+        deleteblanklines:
+          'Script de python para eliminar las líneas en blanco de un archivo.'
       },
       about: {
-        title: 'Sobre mí'
+        title: 'Sobre mí',
+        name: 'Daniel J. Pérez Nieto',
+        description:
+          'Soy Desarrollador Junior Full Stack, centrado en desarrollo web, tanto Frontend como Backend, también tengo experiencia en Java y Android.\n\nEstoy trabajando con Vuejs así como con Angular y aprendiendo más Python para automatización y desarrollo en escritorio.\n\nEstoy disponible para colaboraciones y discutir sobre cualquier cosa, puedes ponerte en contacto aquí:'
       }
     }
   },
   en: {
-    name: 'Dkdnil J. Pkfms Nkder',
     madeWith: {
       made: 'Made with',
       by: 'by',
@@ -42,10 +45,20 @@ export const strings = {
         title: 'Blog'
       },
       projects: {
-        title: 'Projects'
+        title: 'Projects',
+        mywatchlist: 'Web to do a tracking of your series.',
+        mywatchlistapi: 'API for MyWatchList web application.',
+        nomoreintros: 'Program to cut videos, intros and credits.',
+        horascli:
+          'Python CLI to create a schedule of hours used in your projects with Markdown.',
+        personalvue: 'Personal multilanguage portfolio made in VueJS.',
+        deleteblanklines: 'Python script to delete blank lines in a file.'
       },
       about: {
-        title: 'About Me'
+        title: 'About Me',
+        name: 'Daniel J. Pérez Nieto',
+        description:
+          "I'm a Spanish Junior Full Stack Developer, focused on FrontEnd and BackEnd for Web Development, i have Java and Android experience too.\n\nI'm working with Vuejs and Angular, as well as learning more Python for automation and desktop development.\n\nI'm available for collaborations and discussions about all, you can get in touch here:"
       }
     }
   }
