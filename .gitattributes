@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Ignore files to detect correct language
+build/* linguist-vendored
+test/* linguist-vendored
+config/* linguist-vendored
