@@ -3,7 +3,7 @@ import SectionAbout from '@/components/SectionAbout';
 import VueI18n from 'vue-i18n';
 import strings from '../../../src/shared/i18n';
 import router from '@/router';
-require('es6-promise/auto');
+import 'es6-promise/auto';
 
 Vue.use(VueI18n);
 const i18n = new VueI18n({

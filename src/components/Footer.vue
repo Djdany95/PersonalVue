@@ -10,9 +10,11 @@
         class="lang"
         @click="setLang(item.lang)">{{ item.name }}</a>
     </span>
-    <div><i
-      class="fas fa-language icoLang"
-      @click="toggleLang"/></div>
+    <div>
+      <i
+        class="fas fa-language icoLang"
+        @click="toggleLang"/>
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,13 @@
-# portfolio
+# Portfolio Multilanguage Web
 
-> A Vue.js project
+> A Portfolio Web you can use as layout, has 2 main sections: About and Portfolio. And 2 languages: English and Spanish.
+Can be easily customizable.
+
+### About
+You can put a name, picture, description and upload your resume to show it directly in this section.
+
+### Portfolio
+You can set unlimited projects and will be displayed as cards with link to go to the project.
 
 ## Build Setup
 
@@ -28,3 +35,7 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## TODO
+- [ ] Make it more portable and customizable
+- [ ] Blog section
