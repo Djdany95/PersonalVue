@@ -3,17 +3,41 @@
   <div id="about">
     <h1>{{ $t('section.about.title') }}</h1>
     <div class="aboutCard">
-      <div class="openResume" @click="toggleResume">
+      <div
+        class="openResume"
+        @click="toggleResume">
         <h1>{{ $t('section.about.name') }}</h1>
-        <img class="myPic" src="https://via.placeholder.com/350x150" alt="Daniel">
+        <img
+          class="myPic"
+          src="https://via.placeholder.com/350x150"
+          alt="Daniel">
       </div>
       <h3>{{ $t('section.about.description') }}</h3>
-      <a href="https://github.com/djdany01"><img class="badge" src="../assets/badges/github-badge.svg" alt="Daniel J. Pérez Nieto Github"/></a>
-      <a href="https://dev.to/djdany01"><img class="badge" src="../assets/badges/dev-badge.svg" alt="Daniel J. Pérez Nieto DEV.to"/></a>
-      <a href="https://twitter.com/djdany_01"><img class="badge" src="../assets/badges/twitter-badge.svg" alt="Daniel J. Pérez Nieto Twitter"/></a>
+      <a href="https://github.com/djdany01">
+        <img
+          class="badge"
+          src="../assets/badges/github-badge.svg"
+          alt="Daniel J. Pérez Nieto Github">
+      </a>
+      <a href="https://dev.to/djdany01">
+        <img
+          class="badge"
+          src="../assets/badges/dev-badge.svg"
+          alt="Daniel J. Pérez Nieto DEV.to">
+      </a>
+      <a href="https://twitter.com/djdany_01">
+        <img
+          class="badge"
+          src="../assets/badges/twitter-badge.svg"
+          alt="Daniel J. Pérez Nieto Twitter">
+      </a>
     </div>
-    <transition name="fade" mode="out-in">
-      <div class="resumeCard" v-if="resume">
+    <transition
+      name="fade"
+      mode="out-in">
+      <div
+        v-if="resume"
+        class="resumeCard">
         <component :is="resumeComponent" />
       </div>
     </transition>
@@ -30,17 +54,18 @@ export default {
       resume: false
     }
   },
+  computed: {
+    resumeComponent () {
+      // eslint-disable-next-line no-console
+      console.log('resume-'+this.$locale) // Not working without this
+      return () => import('../../static/resume/resume-' + this.$locale + '.md')
+    }
+  },
   methods: {
     toggleResume () {
       this.resume = !this.resume
     }
   },
-  computed: {
-    resumeComponent () {
-      console.log('resume-'+this.$locale) // Not working without this
-      return () => import('../../static/resume/resume-' + this.$locale + '.md')
-    }
-  }
 }
 </script>
 

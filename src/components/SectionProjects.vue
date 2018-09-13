@@ -2,9 +2,14 @@
 <template>
   <div id="projects">
     <h1>{{ $t('section.projects.title') }}</h1>
-    <a v-for="project in projects" :key="project.name" class="projectCard" :href="project.url" :style="{'background-color': project.bck}">
+    <a 
+      v-for="project in projects" 
+      :key="project.name" 
+      :href="project.url" 
+      :style="{'background-color': project.bck}" 
+      class="projectCard">
       <h2>{{ project.name }}</h2>
-      <i :class="project.icon"></i>
+      <i :class="project.icon"/>
       <h4>{{ project.desc }}</h4>
     </a>
   </div>

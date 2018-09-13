@@ -1,9 +1,18 @@
-
 <template>
   <div>
-    <h4 class="madeWith">{{ $t('madeWith.made') }} <a href="https://vuejs.org/"><i class="fas fa-heart"></i></a> {{ $t('madeWith.by') }} <router-link to="/about" class="me">{{ $t('madeWith.me') }}</router-link></h4>
-    <a v-for="(item, index) in lang" :key="index" v-if="openLang" class="lang" @click="setLang(item.lang)">{{ item.name }}</a>
-    <div><i @click="toggleLang" class="fas fa-language icoLang"></i></div>
+    <h4 class="madeWith">{{ $t('madeWith.made') }} <a href="https://vuejs.org/"><i class="fas fa-heart"/></a> {{ $t('madeWith.by') }} <router-link
+      to="/about"
+      class="me">{{ $t('madeWith.me') }}</router-link></h4>
+    <span v-if="openLang">
+      <a
+        v-for="(item, index) in lang"
+        :key="index"
+        class="lang"
+        @click="setLang(item.lang)">{{ item.name }}</a>
+    </span>
+    <div><i
+      class="fas fa-language icoLang"
+      @click="toggleLang"/></div>
   </div>
 </template>
 

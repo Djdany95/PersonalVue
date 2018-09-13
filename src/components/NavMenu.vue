@@ -1,6 +1,11 @@
 <template>
   <nav class="navMenu">
-    <router-link v-for="item in menu" :key="item.name" :id="item.name" :style="{'color': item.color}" :to="item.url">{{ $t('section.'+item.name+'.title') }} <i :class="item.icon"></i></router-link>
+    <router-link
+      v-for="item in menu"
+      :key="item.name"
+      :id="item.name"
+      :style="{'color': item.color}"
+      :to="item.url">{{ $t('section.'+item.name+'.title') }} <i :class="item.icon"/></router-link>
   </nav>
 </template>
 
@@ -17,7 +22,7 @@ export default {
     }
   },
   watch: {
-    '$route' (to, from) {
+    '$route' () {
       this.setBckColor()
     }
   },

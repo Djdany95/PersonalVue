@@ -60,7 +60,7 @@ module.exports = {
   'click language spanish': function(browser) {
     browser
       .useXpath()
-      .click("/html/body/div[@id='app']/div[@id='main']/footer/div[@class='langComp']/a[@class='lang'][2]")
+      .click("/html/body/div[@id='app']/div[@id='main']/footer/div[@class='langComp']/span/a[@class='lang'][2]")
       .useCss()
       .waitForElementNotPresent('.lang', 5000)
 
@@ -71,7 +71,7 @@ module.exports = {
       .click('.icoLang')
       .waitForElementVisible('.lang', 5000)
       .useXpath()
-      .click("/html/body/div[@id='app']/div[@id='main']/footer/div[@class='langComp']/a[@class='lang'][1]")
+      .click("/html/body/div[@id='app']/div[@id='main']/footer/div[@class='langComp']/span/a[@class='lang'][1]")
       .useCss()
       .waitForElementNotPresent('.lang', 5000)
 

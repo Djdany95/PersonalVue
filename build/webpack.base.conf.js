@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const VueLoaderPlugin = require('vue-loader/lib/plugin') // Needed for vue-loader v15
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -61,6 +62,14 @@ module.exports = {
           resolve('node_modules/webpack-dev-server/client')
         ]
       },
+      { // Needed for vue-loader v15
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: file => (
+          /node_modules/.test(file) &&
+          !/\.vue\.js/.test(file)
+        )
+      },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
@@ -102,5 +111,8 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+    new VueLoaderPlugin() // Needed for vue-loader v15
+  ]
 }
