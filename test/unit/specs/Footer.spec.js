@@ -31,8 +31,7 @@ describe('Footer.vue', () => {
 
   it('should set data correctly', () => {
     expect(vm.openLang).to.be.false;
-    expect(vm.lang[0].name).to.equal('English');
-    expect(vm.lang[1].name).to.equal('Español');
+    expect(vm.languages.length).to.be.gt(0);
   });
 
   it('toggleLang should set data correctly', done => {
@@ -51,31 +50,35 @@ describe('Footer.vue', () => {
 
     vm.setLang('es');
     Vue.nextTick(function() {
-      expect(vm.$el.querySelector('.madeWith').textContent).to.have.string('Hecho');
+      expect(vm.$el.querySelector('.madeWith').textContent).to.have.string(
+        'Hecho'
+      );
       done();
     });
 
     vm.setLang('en');
     Vue.nextTick(function() {
-      expect(vm.$el.querySelector('.madeWith').textContent).to.have.string('Made');
+      expect(vm.$el.querySelector('.madeWith').textContent).to.have.string(
+        'Made'
+      );
       done();
     });
   });
 
   it('getLang should set data correctly when getItem', () => {
     localStorage.clear();
-    expect(localStorage.getItem('lang')).to.deep.equal(null)
+    expect(localStorage.getItem('lang')).to.deep.equal(null);
     localStorage.setItem('lang', 'es');
 
-    vm.getLang()
-    expect(localStorage.getItem('lang')).to.deep.equal('es')
+    vm.getLang();
+    expect(localStorage.getItem('lang')).to.deep.equal('es');
   });
 
   it('getLang should set data correctly when not getItem', () => {
     localStorage.clear();
-    expect(localStorage.getItem('lang')).to.deep.equal(null)
+    expect(localStorage.getItem('lang')).to.deep.equal(null);
 
-    vm.getLang()
-    expect(localStorage.getItem('lang')).to.deep.equal('en')
+    vm.getLang();
+    expect(localStorage.getItem('lang')).to.deep.equal('en');
   });
 });

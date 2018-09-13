@@ -5,7 +5,7 @@
       class="me">{{ $t('madeWith.me') }}</router-link></h4>
     <span v-if="openLang">
       <a
-        v-for="(item, index) in lang"
+        v-for="(item, index) in languages"
         :key="index"
         class="lang"
         @click="setLang(item.lang)">{{ item.name }}</a>
@@ -19,12 +19,13 @@
 </template>
 
 <script>
+import { languages as configLanguages } from '../shared/config.js'
 export default {
   name: 'Languages',
   data () {
     return {
       openLang: false,
-      lang: [{'name': 'English', 'lang': 'en'}, {'name': 'Español', 'lang': 'es'}]
+      languages: configLanguages
     }
   },
   created () {
@@ -78,7 +79,7 @@ export default {
 .icoLang:hover {
   color: #2caf74;
 }
-.me{
+.me {
   color: #551a8b;
   text-decoration: none;
 }

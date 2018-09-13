@@ -30,17 +30,17 @@ describe('SectionAbout.vue', () => {
 
   it('toggleResume should set data correctly', () => {
     expect(vm.resume).to.be.false;
-    vm.toggleResume()
+    vm.toggleResume();
     expect(vm.resume).to.be.true;
   });
 
   it('resumeComponent should set data correctly in spanish', () => {
-    vm.$locale='es'
-    vm.resumeComponent()
+    vm.$locale = 'es';
+    vm.resumeComponent();
   });
 
   it('resumeComponent should set data correctly in english', () => {
-    vm.$locale='en'
-    vm.resumeComponent()
+    vm.$locale = 'en';
+    vm.resumeComponent();
   });
 });

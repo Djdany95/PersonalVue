@@ -4,8 +4,8 @@
       <NavMenu/>
     </header>
     <section>
-      <transition 
-        name="fade" 
+      <transition
+        name="fade"
         mode="out-in">
         <router-view/>
       </transition>
@@ -39,7 +39,7 @@ header {
   width: 100%;
   text-align: right;
 }
-section{
+section {
   margin-top: 60px;
   height: 100%;
   padding: 0 2em 0 2em;
@@ -61,8 +61,9 @@ footer {
   }
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

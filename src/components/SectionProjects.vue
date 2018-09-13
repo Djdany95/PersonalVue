@@ -2,11 +2,11 @@
 <template>
   <div id="projects">
     <h1>{{ $t('section.projects.title') }}</h1>
-    <a 
-      v-for="project in projects" 
-      :key="project.name" 
-      :href="project.url" 
-      :style="{'background-color': project.bck}" 
+    <a
+      v-for="project in projects"
+      :key="project.name"
+      :href="project.url"
+      :style="{'background-color': project.bck}"
       class="projectCard">
       <h2>{{ project.name }}</h2>
       <i :class="project.icon"/>
@@ -16,23 +16,34 @@
 </template>
 
 <script>
+import { projects as configProjects } from '../shared/config.js'
 export default {
   name: 'Projects',
   data () {
     return {
-      colors: ['#ccffe8', '#ffd1db', '#ffffd2', '#d4f6ff', '#95F7CA', '#9ACFF5', '#FFB59A', '#FFD39A', '#d4f6ff', '#ffffd2', '#ffd1db', '#ff8a90', '#ffee7d', '#84e4ff']
+      cardColors: [
+        '#ccffe8', '#ffd1db', '#ffffd2', '#d4f6ff', '#95F7CA', '#9ACFF5', '#FFB59A',
+        '#FFD39A', '#d4f6ff', '#ffffd2', '#ffd1db', '#ff8a90', '#ffee7d', '#84e4ff'
+        ]
     }
   },
   computed: {
     projects: function () {
-      return [
-        {'name': 'MyWatchList', 'icon': 'fab fa-angular', 'url': 'https://github.com/djdany01/MyWatchList', 'desc': this.$t('section.projects.mywatchlist'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
-        {'name': 'MyWatchList API', 'icon': 'fab fa-node-js', 'url': 'https://github.com/djdany01/MyWatchListAPI', 'desc': this.$t('section.projects.mywatchlistapi'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
-        {'name': 'NoMoreIntros', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/NoMoreIntros', 'desc': this.$t('section.projects.nomoreintros'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
-        {'name': 'HorasCLI', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/HorasCLI', 'desc': this.$t('section.projects.horascli'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
-        {'name': 'PersonalVue', 'icon': 'fab fa-vuejs', 'url': 'https://github.com/djdany01/personalVue', 'desc': this.$t('section.projects.personalvue'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]},
-        {'name': 'DeleteBlankLines', 'icon': 'fab fa-python', 'url': 'https://github.com/djdany01/DeleteBlankLines', 'desc': this.$t('section.projects.deleteblanklines'), 'bck': this.colors[Math.floor(Math.random() * this.colors.length)]}
-      ]
+      const vm = this;
+      let projects = configProjects.map((project) => {
+        project.desc = vm.translateProject(project.translate);
+        project.bck = vm.randomColor();
+        return project;
+      });
+      return projects;
+    }
+  },
+  methods: {
+    randomColor: function(){
+      return this.cardColors[Math.floor(Math.random() * this.cardColors.length)];
+    },
+    translateProject: function(translate){
+      return this.$t(translate);
     }
   }
 }

@@ -24,7 +24,7 @@ describe('SectionProjects.vue', () => {
   });
 
   it('should set data correctly', () => {
-    expect(vm.colors.length).to.equal(14);
-    expect(vm.projects.length).to.equal(6);
+    expect(vm.cardColors.length).to.be.gt(1);
+    expect(vm.projects.length).to.be.gt(1);
   });
 });

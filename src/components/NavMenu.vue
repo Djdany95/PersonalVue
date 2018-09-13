@@ -1,7 +1,7 @@
 <template>
   <nav class="navMenu">
     <router-link
-      v-for="item in menu"
+      v-for="item in sections"
       :key="item.name"
       :id="item.name"
       :style="{'color': item.color}"
@@ -10,15 +10,12 @@
 </template>
 
 <script>
+import { sections as configSections } from '../shared/config.js'
 export default {
   name: 'NavMenu',
   data () {
     return {
-      menu: [
-        { 'name': 'about', 'icon': 'fas fa-user-circle', 'color': '#48b9d8', 'bck': '#d4f6ff', 'url': '/' },
-        { 'name': 'projects', 'icon': 'fas fa-folder-open', 'color': '#d6ba00', 'bck': '#ffffd2', 'url': '/projects' },
-        { 'name': 'blog', 'icon': 'fas fa-file-alt', 'color': '#be030c', 'bck': '#ffd1db', 'url': '/blog' }
-      ]
+      sections: configSections
     }
   },
   watch: {
@@ -31,7 +28,7 @@ export default {
   },
   methods: {
     setBckColor: function () {
-      this.menu.forEach(item => {
+      this.sections.forEach(item => {
         if (item.url === this.$route.path) {
           document.getElementById(item.name).style.backgroundColor = item.bck
         } else {
