@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Main from '../components/Main.vue';
 import Projects from '../components/SectionProjects.vue';
 import About from '../components/SectionAbout.vue';
+import Blog from '../components/SectionBlog.vue';
 
 Vue.use(Router);
 
@@ -15,7 +16,8 @@ export default new Router({
       children: [
         { path: '', component: About },
         { path: 'about', component: About },
-        { path: 'projects', component: Projects }
+        { path: 'projects', component: Projects },
+        { path: 'blog', component: Blog }
       ]
     }
   ]

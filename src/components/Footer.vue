@@ -1,8 +1,11 @@
 <template>
   <div>
-    <h4 class="madeWith">{{ $t('madeWith.made') }} <a href="https://vuejs.org/"><i class="fas fa-heart"/></a> {{ $t('madeWith.by') }} <router-link
-      to="/about"
-      class="me">{{ $t('madeWith.me') }}</router-link></h4>
+    <h4 class="madeWith">{{ $t('madeWith.made') }} <a 
+      href="https://vuejs.org/" 
+      target="top"><i class="fas fa-heart me"/></a> {{ $t('madeWith.by') }} <a
+        href="https://dev.to/djdany01"
+        class="me"
+        target="top">{{ $t('madeWith.me') }}</a></h4>
     <span v-if="openLang">
       <a
         v-for="(item, index) in languages"
@@ -57,6 +60,7 @@ export default {
   position: absolute;
   bottom: 0px;
   color: #2caf74;
+  font-size: 0.7em;
 }
 .lang {
   display: block;
@@ -77,10 +81,10 @@ export default {
   transition: all 0.3s ease;
 }
 .icoLang:hover {
-  color: #2caf74;
+  color: rgb(44, 175, 116);
 }
 .me {
-  color: #551a8b;
+  color: rgb(44, 62, 80);
   text-decoration: none;
 }
 </style>

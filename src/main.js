@@ -4,13 +4,13 @@ import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import App from './App';
 import router from './router';
-import strings from './shared/i18n';
+import { i18nStrings } from './shared/config';
 
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
   locale: 'en', // set default locale
-  messages: strings // set locale strings
+  messages: i18nStrings // set locale strings
 });
 
 Object.defineProperty(Vue.prototype, '$locale', {

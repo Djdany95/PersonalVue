@@ -7,7 +7,8 @@
       :key="project.name"
       :href="project.url"
       :style="{'background-color': project.bck}"
-      class="projectCard">
+      class="projectCard"
+      target="top">
       <h2>{{ project.name }}</h2>
       <i :class="project.icon"/>
       <h4>{{ project.desc }}</h4>
@@ -91,7 +92,6 @@ export default {
   }
   .projectCard h4 {
     position: relative;
-    bottom: -20px;
   }
 }
 </style>

@@ -40,7 +40,7 @@ header {
   text-align: right;
 }
 section {
-  margin-top: 60px;
+  margin-top: 4em;
   height: 100%;
   padding: 0 2em 0 2em;
 }

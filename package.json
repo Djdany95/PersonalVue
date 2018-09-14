@@ -16,6 +16,7 @@
     "safe-update": "npm install && npm test && npm start"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "vue": "^2.5.17",
     "vue-i18n": "^8.1.0",
     "vue-md-loader": "^1.0.0",
