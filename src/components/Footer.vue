@@ -1,16 +1,19 @@
 <template>
   <div>
-    <h4 class="madeWith">{{ $t('madeWith.made') }} <a 
-      href="https://vuejs.org/" 
-      target="top"><i class="fas fa-heart me"/></a> {{ $t('madeWith.by') }} <a
+    <h4 class="madeWith">{{ $t('madeWith.made') }} <a
+      href="https://vuejs.org/"
+      target="top"
+      aria-label="VueJS"><i class="fas fa-heart me"/></a> {{ $t('madeWith.by') }} <a
         href="https://dev.to/djdany01"
         class="me"
-        target="top">{{ $t('madeWith.me') }}</a></h4>
+        target="top"
+        aria-label="Daniel J. Pérez Nieto">{{ $t('madeWith.me') }}</a></h4>
     <span v-if="openLang">
       <a
         v-for="(item, index) in languages"
         :key="index"
         class="lang"
+        aria-label="Language"
         @click="setLang(item.lang)">{{ item.name }}</a>
     </span>
     <div>

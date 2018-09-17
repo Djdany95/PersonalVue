@@ -16,7 +16,8 @@
             :key="post.id"
             :href="post.url"
             class="postCard"
-            target="top">
+            target="top"
+            aria-label="Post">
             <h1>{{ post.post }}</h1>
             <h5><u>{{ $t('section.blog.read') }}</u></h5>
           </a>
@@ -30,7 +31,8 @@
       <a
         :href="'https://dev.to/'+blogUser"
         class="loadMore"
-        target="top">{{ $t('section.blog.loadmore') }}</a>
+        target="top"
+        aria-label="Dev.to">{{ $t('section.blog.loadmore') }}</a>
     </div>
   </div>
 </template>

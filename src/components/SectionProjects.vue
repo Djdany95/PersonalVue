@@ -8,7 +8,8 @@
       :href="project.url"
       :style="{'background-color': project.bck}"
       class="projectCard"
-      target="top">
+      target="top"
+      aria-label="Projects">
       <h2>{{ project.name }}</h2>
       <i :class="project.icon"/>
       <h4>{{ project.desc }}</h4>

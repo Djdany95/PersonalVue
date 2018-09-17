@@ -3,7 +3,7 @@
     <router-link
       v-for="item in sections"
       :key="item.name"
-      :id="item.name"
+      :id="item.name+'Tab'"
       :style="{'color': item.color}"
       :to="item.url">{{ $t('section.'+item.name+'.title') }} <i :class="item.icon"/></router-link>
   </nav>
@@ -30,9 +30,9 @@ export default {
     setBckColor: function () {
       this.sections.forEach(item => {
         if (item.url === this.$route.path) {
-          document.getElementById(item.name).style.backgroundColor = item.bck
+          document.getElementById(item.name+'Tab').style.backgroundColor = item.bck
         } else {
-          document.getElementById(item.name).style.backgroundColor = 'initial'
+          document.getElementById(item.name+'Tab').style.backgroundColor = 'initial'
         }
       })
     }
