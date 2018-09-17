@@ -2,13 +2,13 @@ import Vue from 'vue';
 import NavMenu from '@/components/NavMenu';
 import SectionAbout from '@/components/SectionAbout';
 import VueI18n from 'vue-i18n';
-import strings from '../../../src/shared/i18n';
+import {i18nStrings} from '../../../src/shared/config';
 import VueRouter from 'vue-router';
 
 Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: 'es', // set default locale
-  messages: strings // set locale strings
+  messages: i18nStrings // set locale strings
 });
 
 Vue.use(VueRouter);

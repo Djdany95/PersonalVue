@@ -3,8 +3,8 @@
   <div id="blog">
     <h1>{{ $t('section.blog.title') }}</h1>
     <h3 class="totalPosts">{{ totalPosts }} {{ $t('section.blog.published') }}</h3>
-    <div 
-      v-if="loading==true" 
+    <div
+      v-if="loading==true"
       class="spinner"/>
     <div v-else>
       <div v-if="error==false">
@@ -15,7 +15,7 @@
             v-for="post in posts"
             :key="post.id"
             :href="post.url"
-            class="postCard" 
+            class="postCard"
             target="top">
             <h1>{{ post.post }}</h1>
             <h5><u>{{ $t('section.blog.read') }}</u></h5>
@@ -27,16 +27,16 @@
           {{ $t('section.blog.error') }}
         </h1>
       </div>
-      <a 
-        :href="'https://dev.to/'+blogUser" 
-        class="loadMore" 
+      <a
+        :href="'https://dev.to/'+blogUser"
+        class="loadMore"
         target="top">{{ $t('section.blog.loadmore') }}</a>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 import { blogUser } from '../shared/config.js';
 export default {
   name: 'Blog',
@@ -50,17 +50,23 @@ export default {
     }
   },
   created() {
-    axios.get('https://devto-posts-api.herokuapp.com/getlastposts/'+this.blogUser)
-    .then(response => {
-      this.loading = false;
-      this.error = false;
-      this.posts = response.data.posts
-      this.totalPosts = response.data.total
-    })
-    .catch(() => {
-      this.loading = false;
-      this.error = true;
-    })
+    this.getPosts();
+  },
+  methods: {
+    getPosts(){
+      const vm = this;
+      axios.get('https://devto-posts-api.herokuapp.com/getlastposts/'+this.blogUser)
+        .then(response => {
+          vm.loading = false;
+          vm.error = false;
+          vm.posts = response.data.posts;
+          vm.totalPosts = response.data.total;
+        })
+        .catch(() => {
+          vm.loading = false;
+          vm.error = true;
+        })
+    }
   }
 }
 </script>
@@ -91,7 +97,7 @@ export default {
   -moz-box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
   box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
 }
-.postCard h5{
+.postCard h5 {
   text-decoration: #2c3e50;
   margin-bottom: 0;
 }
@@ -133,7 +139,7 @@ export default {
   .totalPosts {
     font-size: 0.9em;
   }
-  .loadMore{
+  .loadMore {
     font-size: 0.9em;
   }
 }

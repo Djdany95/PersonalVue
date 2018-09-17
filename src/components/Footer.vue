@@ -32,24 +32,24 @@ export default {
     }
   },
   created () {
-    this.getLang()
+    this.getLang();
   },
   methods: {
     getLang: function () {
       if (localStorage.getItem('lang')) {
-        this.setLang(localStorage.getItem('lang'))
+        this.setLang(localStorage.getItem('lang'));
       } else {
         localStorage.setItem('lang', 'en')
-        this.setLang(localStorage.getItem('lang'))
+        this.setLang(localStorage.getItem('lang'));
       }
     },
     setLang: function (lang) {
-      this.$locale = lang
-      localStorage.setItem('lang', lang)
-      this.openLang = false
+      this.$locale = lang;
+      localStorage.setItem('lang', lang);
+      this.openLang = false;
     },
     toggleLang: function () {
-      this.openLang = !this.openLang
+      this.openLang = !this.openLang;
     }
   }
 }
