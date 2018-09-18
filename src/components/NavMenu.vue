@@ -5,7 +5,8 @@
       :key="item.name"
       :id="item.name+'Tab'"
       :style="{'color': item.color}"
-      :to="item.url">{{ $t('section.'+item.name+'.title') }} <i :class="item.icon"/></router-link>
+      :to="item.url"
+      class="menuItem">{{ $t('section.'+item.name+'.title') }} <i :class="item.icon"/></router-link>
   </nav>
 </template>
 

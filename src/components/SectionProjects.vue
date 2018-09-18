@@ -1,7 +1,7 @@
 
 <template>
   <div id="projects">
-    <h1>{{ $t('section.projects.title') }}</h1>
+    <h1 class="titleSerif">{{ $t('section.projects.title') }}</h1>
     <a
       v-for="project in projects"
       :key="project.name"
@@ -10,7 +10,7 @@
       class="projectCard"
       target="top"
       aria-label="Projects">
-      <h2>{{ project.name }}</h2>
+      <h2 class="titleSerif">{{ project.name }}</h2>
       <i :class="project.icon"/>
       <h4>{{ project.desc }}</h4>
     </a>

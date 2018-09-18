@@ -1,12 +1,12 @@
 
 <template>
   <div id="about">
-    <h1>{{ $t('section.about.title') }}</h1>
+    <h1 class="titleSerif">{{ $t('section.about.title') }}</h1>
     <div class="aboutCard">
       <div
         class="openResume"
         @click="toggleResume">
-        <h1>{{ $t('section.about.name') }}</h1>
+        <h1 class="titleSerif">{{ $t('section.about.name') }}</h1>
         <img
           class="myPic"
           src="../assets/me.png"
@@ -98,6 +98,7 @@ export default {
   width: 10em;
   margin: 0;
   height: 10em;
+  border: 5px solid rgba(44, 175, 116, 0.2);
 }
 .aboutCard {
   width: 75%;
@@ -118,7 +119,7 @@ export default {
   box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
 }
 .aboutCard h1 {
-  font-size: 1.7em;
+  font-size: 2em;
 }
 .aboutCard h4 {
   white-space: pre-line;
@@ -134,6 +135,11 @@ export default {
   fill: #2c3e50;
   margin: 0em 1em;
   margin-bottom: 1em;
+  transition: all 0.3s ease;
+}
+.aboutCard .badge:hover {
+  height: 5em;
+  width: 6em;
 }
 .resumeCard {
   width: 90%;

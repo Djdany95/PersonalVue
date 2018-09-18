@@ -1,7 +1,7 @@
 
 <template>
   <div id="blog">
-    <h1>{{ $t('section.blog.title') }}</h1>
+    <h1 class="titleSerif">{{ $t('section.blog.title') }}</h1>
     <h3 class="totalPosts">{{ totalPosts }} {{ $t('section.blog.published') }}</h3>
     <div
       v-if="loading==true"
@@ -18,7 +18,7 @@
             class="postCard"
             target="top"
             aria-label="Post">
-            <h1>{{ post.post }}</h1>
+            <h1 class="titleSerif">{{ post.post }}</h1>
             <h5><u>{{ $t('section.blog.read') }}</u></h5>
           </a>
         </transition-group>

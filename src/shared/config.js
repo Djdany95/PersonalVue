@@ -38,7 +38,7 @@ export const i18nStrings = {
         title: 'Sobre mí',
         name: 'Daniel J. Pérez Nieto',
         description:
-          'Soy un Desarrollador Junior Full Stack, centrado en desarrollo web, tanto Frontend como Backend, también tengo experiencia en Java y Android.\n\nEstoy trabajando con Vuejs así como con Angular y aprendiendo más Python para automatización y desarrollo en escritorio.\n\nEstoy disponible para colaboraciones y discutir sobre cualquier cosa, puedes ponerte en contacto conmigo por estas redes:'
+          'Soy un Desarrollador Junior Full Stack, centrado tanto Frontend (Angular, VueJS, ES6/ES7, SASS, LESS) como Backend (Node.js, Flask) para desarrollo web y aplicaciones, también tengo experiencia en Java, Android y Bases de Datos (MySQL, MongoDB).\n\nEstoy trabajando con Vuejs así como con Angular y Node.js, así como aprendiendo más Python para automatización, desarrollo backend y aplicaciones de escritorio. Estoy muy interesado en la tecnología en general.\n\nEstoy disponible para colaboraciones y discutir sobre cualquier cosa, puedes ponerte en contacto conmigo por estas redes:'
       }
     }
   },
@@ -73,7 +73,7 @@ export const i18nStrings = {
         title: 'About Me',
         name: 'Daniel J. Pérez Nieto',
         description:
-          "I'm a Spanish Junior Full Stack Developer, focused on FrontEnd and BackEnd for Web Development, i have Java and Android experience too.\n\nI'm working with Vuejs and Angular, as well as learning more Python for automation and desktop development.\n\nI'm available for collaborations and discussions about all, you can get in touch in this networks:"
+          "I'm a Spanish Junior Full Stack Developer, focused on FrontEnd (Angular, VueJS, ES6/ES7, SASS, LESS) and BackEnd (Node.js, Flask) for apps and web development, i have experience too with Java, Android and Databases (MySQL, MongoDB).\n\nI'm working with Vuejs, Angular and Node.js, as well as learning more Python for automation, backend development and desktop applications. I'm very interested in technology in general.\n\nI'm available for collaborations and discussions about all, you can get in touch in this networks:"
       }
     }
   }
