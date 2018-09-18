@@ -101,7 +101,7 @@ export default {
   border: 5px solid rgba(44, 175, 116, 0.2);
 }
 .aboutCard {
-  width: 75%;
+  width: 85%;
   margin-left: auto !important;
   margin-right: auto !important;
   background-color: rgb(250, 255, 250);
@@ -119,7 +119,7 @@ export default {
   box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
 }
 .aboutCard h1 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 .aboutCard h4 {
   white-space: pre-line;
@@ -127,6 +127,7 @@ export default {
   margin-left: auto !important;
   margin-right: auto !important;
   line-height: 1.7;
+  font-size: 1.1em;
   text-align: left;
 }
 .aboutCard .badge {

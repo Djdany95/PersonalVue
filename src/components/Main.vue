@@ -40,7 +40,7 @@ header {
   text-align: right;
 }
 section {
-  margin-top: 4em;
+  margin-top: 2em;
   height: 100%;
   padding: 0 2em 0 2em;
 }
@@ -51,7 +51,7 @@ footer {
   width: 100%;
 }
 .langComp {
-  padding: 1em;
+  padding: 0 1em;
   text-align: right;
 }
 @media screen and (max-width: 767.98px) {
