@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .projectCard {
   margin: 1em 1em 1em 10em;
   padding: 0.5em 0 0.5em 0;

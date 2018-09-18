@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .navMenu a {
   transition: all 0.3s ease;
   box-shadow: 2px 2px;

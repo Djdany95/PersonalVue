@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .totalPosts {
   margin-left: 1em;
 }

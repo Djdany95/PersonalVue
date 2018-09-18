@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .madeWith {
   position: absolute;
   bottom: 0px;

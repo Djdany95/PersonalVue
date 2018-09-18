@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
