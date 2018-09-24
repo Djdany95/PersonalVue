@@ -42,6 +42,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import (reference) '../../static/style/colors.less';
+
 .navMenu a {
   transition: all 0.3s ease;
   box-shadow: 2px 2px;

@@ -64,7 +64,7 @@
 
 <script>
 // Needed for markdown styles
-import '../../static/css/github-gist.css';
+import '../../static/style/github-gist.css';
 import { social as configSocial } from '../shared/config.js'
 export default {
   name: 'About',
@@ -90,6 +90,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import (reference) '../../static/style/colors.less';
+
 .openResume {
   cursor: pointer;
 }
@@ -104,10 +106,10 @@ export default {
   width: 85%;
   margin-left: auto !important;
   margin-right: auto !important;
-  background-color: rgb(250, 255, 250);
+  background-color: @whiteGreen;
   display: block;
   text-decoration: none;
-  color: #2c3e50;
+  color: @foreColor;
   text-align: center;
   position: relative;
   transition: all 0.3s ease;
@@ -133,7 +135,7 @@ export default {
 .aboutCard .badge {
   height: 4em;
   width: 5em;
-  fill: #2c3e50;
+  fill: @foreColor;
   margin: 0em 1em;
   margin-bottom: 1em;
   transition: all 0.3s ease;
@@ -146,14 +148,14 @@ export default {
   width: 90%;
   margin-left: auto !important;
   margin-right: auto !important;
-  background-color: rgb(250, 255, 250);
+  background-color: hsl(120, 100%, 99%);
   display: block;
   text-decoration: none;
-  color: #2c3e50;
+  color: @foreColor;
   text-align: justify;
   position: relative;
   transition: all 0.3s ease;
-  border: 1px solid rgba(44, 175, 114, 1);
+  border: 1px solid @greenDark;
 }
 .resumeCard section {
   margin: 1em 0;

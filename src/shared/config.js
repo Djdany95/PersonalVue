@@ -18,7 +18,7 @@ export const i18nStrings = {
       },
       blog: {
         title: 'Blog',
-        published: 'Publicaciones publicadas',
+        published: 'Publicaciones',
         error: 'No se han podido cargar las publicaciones.',
         loadmore: 'Ver más...',
         read: 'Leer'
@@ -54,7 +54,7 @@ export const i18nStrings = {
       },
       blog: {
         title: 'Blog',
-        published: 'Posts published',
+        published: 'Posts',
         error: "The posts couldn't be loaded.",
         loadmore: 'See more...',
         read: 'Read'

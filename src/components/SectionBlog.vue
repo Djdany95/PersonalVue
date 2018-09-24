@@ -74,6 +74,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import (reference) '../../static/style/colors.less';
+
 .totalPosts {
   margin-left: 1em;
 }
@@ -88,8 +90,8 @@ export default {
   text-align: center;
   text-decoration: none;
   font-size: 1.5em;
-  color: #2c3e50;
-  background-color: rgb(250, 255, 250);
+  color: @foreColor;
+  background-color: @whiteGreen;
   border: 2px solid rgba(44, 175, 116, 0.2);
   transition: all 0.3s ease;
 }
@@ -100,7 +102,7 @@ export default {
   box-shadow: 0px 0px 120px 0px rgba(44, 175, 116, 0.5);
 }
 .postCard h5 {
-  text-decoration: #2c3e50;
+  text-decoration: @foreColor;
   margin-bottom: 0;
 }
 .loadMore {
@@ -115,8 +117,8 @@ export default {
   text-decoration: none;
   cursor: pointer;
   font-size: 1.1em;
-  color: rgb(250, 255, 250);
-  background-color: #2c3e50;
+  color: @whiteGreen;
+  background-color: @foreColor;
   border: 1px solid rgba(44, 175, 116, 0.2);
   -webkit-border-radius: 2em;
   -moz-border-radius: 2em;
@@ -149,7 +151,7 @@ export default {
 .spinner {
   width: 4em;
   height: 4em;
-  background-color: #2c3e50;
+  background-color: @foreColor;
 
   margin: 5em auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;

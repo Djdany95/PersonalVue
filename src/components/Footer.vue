@@ -59,10 +59,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import (reference) '../../static/style/colors.less';
+
 .madeWith {
   position: absolute;
   bottom: 0px;
-  color: #2caf74;
+  color: @greenDark;
   font-size: 0.7em;
 }
 .lang {
@@ -76,7 +78,7 @@ export default {
 .lang:hover {
   font-size: 1.5em;
   font-weight: bolder;
-  color: #2caf74;
+  color: @greenDark;
 }
 .icoLang {
   font-size: 2.5em;
@@ -84,10 +86,10 @@ export default {
   transition: all 0.3s ease;
 }
 .icoLang:hover {
-  color: rgb(44, 175, 116);
+  color: @greenDark;
 }
 .me {
-  color: rgb(44, 62, 80);
+  color: @foreColor;
   text-decoration: none;
 }
 </style>

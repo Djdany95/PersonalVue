@@ -1,4 +1,3 @@
-
 <template>
   <div id="projects">
     <h1 class="titleSerif">{{ $t('section.projects.title') }}</h1>
@@ -52,6 +51,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import (reference) '../../static/style/colors.less';
+
 .projectCard {
   margin: 1em 1em 1em 10em;
   padding: 0.5em 0 0.5em 0;
@@ -59,7 +60,7 @@ export default {
   height: 15em;
   display: inline-block;
   text-decoration: none;
-  color: #2c3e50;
+  color: @foreColor;
   text-align: center;
   position: relative;
   transition: all 0.3s ease;

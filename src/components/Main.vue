@@ -31,6 +31,8 @@ export default {
 </script>
 
 <style lang="less">
+@import (reference) '../../static/style/colors.less';
+
 header {
   position: fixed;
   z-index: 999;
