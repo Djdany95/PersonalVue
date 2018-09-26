@@ -57,7 +57,7 @@ export default {
   methods: {
     getPosts(){
       const vm = this;
-      axios.get('https://devto-posts-api.herokuapp.com/getlastposts/'+this.blogUser)
+      return axios.get('https://devto-posts-api.herokuapp.com/getlastposts/'+this.blogUser)
         .then(response => {
           vm.loading = false;
           vm.error = false;

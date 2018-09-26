@@ -46,6 +46,10 @@ describe('SectionBlog.vue', () => {
       total: '1'
     });
     await vm.getPosts();
+    expect(vm.error).to.be.false;
+    expect(vm.loading).to.be.false;
+    expect(vm.posts.length).to.be.equal(1);
+    expect(vm.totalPosts).to.be.equal('1');
   });
 
   it('getPosts FAIL should set data correctly', async () => {
